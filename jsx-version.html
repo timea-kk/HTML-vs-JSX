@@ -59,7 +59,7 @@
                 includesText: 'Includes:',
                 features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
                 buttonText: 'Download',
-                buttonVariant: 'secondary',
+                buttonVariant: 'tertiary',
             };
             const proPlan = {
                 title: 'Pro',
@@ -75,15 +75,30 @@
                 buttonVariant: 'primary',
             };
 
+            const enterprisePlan = {
+                title: 'Enterprise',
+                price: '$60/mo.',
+                includesText: 'Everything in Pro, plus:',
+                features: [
+                    'Team workspaces and shared settings',
+                    'Priority support and onboarding',
+                    'Advanced security & compliance',
+                    'Custom usage limits',
+                ],
+                buttonText: 'Contact sales',
+                buttonVariant: 'primary',
+            };
+
             return (
                 // <> is a React Fragment - it groups elements without adding extra HTML divs
                 <>
                     <p className="page-label"><strong>JSX version</strong> — same UI, built with components</p>
                     <div className="cards-container">
-                        {/* The spread operator {...hobbyPlan} passes all object properties as individual props */}
+                        {/* The spread operator {...plan} passes all object properties as individual props */}
                         {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
+                        <PricingCard {...enterprisePlan} />
                     </div>
                 </>
             );
