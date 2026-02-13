@@ -147,6 +147,20 @@ body {
     background-color: #333;
 }
 
+.download-button.tertiary {
+    background-color: transparent;
+    border: 1px solid #c4c1b5;
+    color: #333;
+}
+
+.download-button.tertiary:hover {
+    background-color: #e2e0d5;
+}
+
+.download-button.tertiary:active {
+    background-color: #f2f1ed;
+}
+
 /* Fixed label at the very top of the viewport describing the page */
 .page-label {
     position: fixed;
