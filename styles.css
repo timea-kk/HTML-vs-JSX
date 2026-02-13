@@ -1,44 +1,50 @@
+/* Global reset so spacing and sizing behave consistently across elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page‑level layout and base typography */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f7f7f4;
+    background-color: #f7f7f4; /* Warm light background behind the cards */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    min-height: 100vh; /* Vertically center the cards in the viewport */
+    padding: 20px; /* Breathing room on small screens */
 }
 
+/* Flex container that lines up the pricing cards horizontally */
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 24px; /* Space between each card */
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
 }
 
+/* Individual pricing card shell */
 .card {
     display: flex;
     flex-direction: column;
-    min-height: 380px;
+    min-height: 380px; /* Ensures buttons align along the bottom */
     background-color: #f2f1ed;
     border-radius: 4px;
     padding: 16px;
     width: 320px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent cards from shrinking too small */
 }
 
+/* Container for the title, price and features inside each card */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name styling (Hobby / Pro) */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +53,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Wrapper for price details so amount and period align nicely */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +61,38 @@ body {
     align-items: baseline;
 }
 
+/* Main price amount (e.g. Free / $20) */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period (e.g. /mo.) shown smaller next to amount */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Spacing below the feature list block inside each card */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* Intro line above the feature list (e.g. “Includes:”) */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Unstyled list so we can control bullets with custom checkmarks */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Each feature row with checkmark + text aligned on one line */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +101,7 @@ body {
     color: #26251e;
 }
 
+/* Visual checkmark icon that replaces the default bullet */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,12 +109,13 @@ body {
     font-weight: 400;
 }
 
+/* Base button style shared by both Hobby and Pro CTAs */
 .download-button {
-    margin-top: auto;
+    margin-top: auto; /* Push button to the bottom of the card */
     width: fit-content;
     background-color: #e6e5e0;
     border: none;
-    border-radius: 999px;
+    border-radius: 999px; /* Fully pill‑shaped button */
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
@@ -109,6 +124,7 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Hover / active states for the secondary (light) button */
 .download-button:hover {
     background-color: #D8D6CE;
 }
@@ -117,6 +133,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary button variant used for the Pro plan CTA */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +147,7 @@ body {
     background-color: #333;
 }
 
+/* Fixed label at the very top of the viewport describing the page */
 .page-label {
     position: fixed;
     top: 16px;
@@ -143,6 +161,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Slightly darker emphasis for the “HTML version” text */
 .page-label strong {
     color: #333;
 }
